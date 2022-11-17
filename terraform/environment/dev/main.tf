@@ -22,8 +22,8 @@ terraform {
 
 terraform {
   backend "s3" {
-    bucket         = "cloudgeeks-terraform"
-    key            = "env/dev/cloudgeeks-dev.tfstate"
+    bucket         = "cloudgeeksca-terraform"
+    key            = "env/dev/cloudgeeksca-dev.tfstate"
     region         = "us-east-1"
    # dynamodb_table = "cloudgeeks-dev-terraform-backend-state-lock"
   }
