@@ -90,8 +90,8 @@ module "eks" {
   subnets                   = module.eks_vpc.private_subnets
   workers_role_name         = "iam-eks-workers-role"
   create_eks                = true
-  manage_aws_auth           = true
-  write_kubeconfig          = true
+  manage_aws_auth           = false
+  write_kubeconfig          = false
   kubeconfig_output_path    = "/root/.kube/config" # touch /root/.kube/config   # for terraform HELM provider, we neeed this + #  Error: configmaps "aws-auth" already exists 
   kubeconfig_name           = "config"                                                                                         #  Solution: kubectl delete configmap aws-auth -n kube-system
   enable_irsa               = true                 # oidc
